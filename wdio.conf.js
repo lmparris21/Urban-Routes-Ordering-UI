@@ -7,8 +7,8 @@ exports.config = {
         // 'path/to/excluded/files'
     ],
     maxInstances: 10,
-    headless: true,
-    capabilities: [
+    headless: false,
+    capabilities: [/*
         {
         maxInstances: 5,
         browserName: 'chrome',
@@ -16,25 +16,25 @@ exports.config = {
         'goog:chromeOptions': {
             args: ['headless', 'disable-gpu']
         }
-    },
+    },*/
     {
         maxInstances: 5,
         browserName: 'firefox',
         acceptInsecureCerts: true,
         'moz:firefoxOptions': {
-            args: ['-headless']
+            args: [/*'-headless'*/]
         }
     }
 ],
     logLevel: 'error',
     bail: 0,
-    baseUrl: 'https://e629ed6b-4969-442b-987e-087e81eb10ca.serverhub.practicum-services.com',
+    baseUrl: 'https://1452e4a9-6eac-4f84-ae11-6472709e69d6.serverhub.tripleten-services.com',
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
     services: [
-        'chromedriver', 
-        'geckodriver', 
+        /*'chromedriver'*/, 
+        'firefox-profile', 
         'intercept', 
     ],
     framework: 'mocha',
