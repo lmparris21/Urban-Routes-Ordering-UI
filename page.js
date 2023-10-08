@@ -7,7 +7,9 @@ module.exports = {
     cardNumber: '#number',
     cardCode: '.card-code-input #code',
     inputMessageToDriver: '#comment',
-    actualMessageToDriver: '#comment[value="Please hurry!"]',  
+    actualMessageToDriver: '#comment[value="Please hurry!"]',
+    fromFieldWithAddress: '#from[value="East 2nd Street, 601"]',  
+    toFieldWithAddress: '#to[value="1300 1st St"]',
 
     // Buttons
     callATaxiButton: 'button=Call a taxi',
@@ -19,7 +21,9 @@ module.exports = {
     linkCardButton: 'button=Link',
     closePaymentMethodModalButton: '.payment-picker .close-button',
     supportiveButton: 'div=Supportive',
-    blanketAndHandkerchiefsButton: '.switch',
+    supportiveButtonActive: 'div=Blanket and handkerchiefs',
+    blanketAndHandkerchiefsButton: '.r-sw',
+    blanketAndHandkerchiefsButtonEnabled: '.switch',
     addIceCreamButton: '.counter-plus',
     numberOfIceCreams: '.counter-value=2',
     orderButton: '.smart-button-wrapper',
