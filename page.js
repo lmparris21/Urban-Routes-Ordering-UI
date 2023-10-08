@@ -61,15 +61,15 @@ module.exports = {
         await $(this.nextButton).click();
         // we should wait for response
         // eslint-disable-next-line wdio/no-pause
-        await browser.pause(2000);
+        await browser.pause(4000);
         const codeField = await $(this.codeField);
         // collect all responses
         const requests = await browser.getRequests();
         // use first response
-        await expect(requests.length).toBe(1)
-        const code = await requests[0].response.body.code
-        await codeField.setValue(code)
-        await $(this.confirmButton).click()
+        await expect(requests.length).toBe(1);
+        const code = await requests[0].response.body.code;
+        await codeField.setValue(code);
+        await $(this.confirmButton).click();
     },
     addPaymentMethodCard: async function() {
         const paymentMethodButton = await $(this.paymentMethodButton);
